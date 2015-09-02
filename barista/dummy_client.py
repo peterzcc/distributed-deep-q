@@ -36,6 +36,7 @@ if __name__ == "__main__":
 
     for i in xrange(N):
         client = DummyClient('127.0.0.1', 50001)
+        #client = DummyClient('127.0.0.1', 6379)
         client.send(barista.GRAD_UPDATE)
         response = client.recv()
         print "Response[%d]:" % i, response

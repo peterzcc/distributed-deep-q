@@ -145,9 +145,10 @@ class ReplayDataset(object):
                       non_terminal, sample_size):
         """ Same as sample() but writes data directly to argument arrays. """
         if sample_size >= self.valid:
-            raise ValueError(
+            return
+            '''raise ValueError(
                   "Can't draw sample of size %d from replay dataset of size %d"
-                  % (sample_size, self.valid))
+                  % (sample_size, self.valid))'''
 
         idx = random.sample(xrange(0, self.valid), sample_size)
 
